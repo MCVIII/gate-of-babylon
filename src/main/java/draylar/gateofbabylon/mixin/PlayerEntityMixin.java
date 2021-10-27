@@ -2,7 +2,6 @@ package draylar.gateofbabylon.mixin;
 
 import draylar.gateofbabylon.api.DoubleAttackHelper;
 import draylar.gateofbabylon.item.CustomShieldItem;
-import draylar.gateofbabylon.item.HaladieItem;
 import draylar.gateofbabylon.registry.GOBItems;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -87,26 +86,5 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         this.getItemCooldownManager().set(GOBItems.GOLDEN_SHIELD, 100);
         this.getItemCooldownManager().set(GOBItems.DIAMOND_SHIELD, 100);
         this.getItemCooldownManager().set(GOBItems.NETHERITE_SHIELD, 100);
-    }
-
-    @Unique
-    private boolean gob_hasHaladieAttacked = false;
-
-    @Inject(
-            method = "attack",
-            at = @At("RETURN"))
-    private void onAttack(Entity target, CallbackInfo ci) {
-        // If we are holding a Haladie, enter double-attack logic.
-        if(getMainHandStack().getItem() instanceof HaladieItem && !world.isClient) {
-            // If we have NOT already attacked, reset the enemies i-frames and attack again.
-            if(!gob_hasHaladieAttacked) {
-                target.timeUntilRegen = 0;
-                gob_hasHaladieAttacked = true;
-                DoubleAttackHelper.queueDoubleAttack((ServerPlayerEntity) (Object) this, target);
-                return;
-            }
-        }
-
-        gob_hasHaladieAttacked = false;
     }
 }

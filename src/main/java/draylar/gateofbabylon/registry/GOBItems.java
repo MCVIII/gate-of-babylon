@@ -31,14 +31,6 @@ public class GOBItems {
     public static final DaggerItem DIAMOND_DAGGER = register("diamond_dagger", new DaggerItem(ToolMaterials.DIAMOND, 6.5f, 2f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
     public static final DaggerItem NETHERITE_DAGGER = register("netherite_dagger", new DaggerItem(ToolMaterials.NETHERITE, 6.5f, 2.3f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).fireproof()));
 
-    // Spears are ranged weapons, similar to Tridents.
-    public static final SpearItem WOODEN_SPEAR = register("wooden_spear", new SpearItem(ToolMaterials.WOOD, 3.0f, 1.4f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
-    public static final SpearItem STONE_SPEAR = register("stone_spear", new SpearItem(ToolMaterials.STONE, 4.0f, 1.4f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
-    public static final SpearItem IRON_SPEAR = register("iron_spear", new SpearItem(ToolMaterials.IRON, 6.0f, 1.3f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
-    public static final SpearItem GOLDEN_SPEAR = register("golden_spear", new SpearItem(ToolMaterials.GOLD, 3.0f, 1.2f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
-    public static final SpearItem DIAMOND_SPEAR = register("diamond_spear", new SpearItem( ToolMaterials.DIAMOND, 7.0f, 1.1f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
-    public static final SpearItem NETHERITE_SPEAR = register("netherite_spear", new SpearItem(ToolMaterials.NETHERITE, 8.0f, 1.0f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).fireproof()));
-
     public static final BroadswordItem WOODEN_BROADSWORD = register("wooden_broadsword", new BroadswordItem(ToolMaterials.WOOD, 6f, 1.0f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
     public static final BroadswordItem STONE_BROADSWORD = register("stone_broadsword", new BroadswordItem(ToolMaterials.STONE, 8f, 1.0f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
     public static final BroadswordItem IRON_BROADSWORD = register("iron_broadsword", new BroadswordItem(ToolMaterials.IRON, 10f, 1.0f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
@@ -53,13 +45,6 @@ public class GOBItems {
     public static final RapierItem GOLDEN_RAPIER = register("golden_rapier", new RapierItem(ToolMaterials.GOLD,2f, 3f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
     public static final RapierItem DIAMOND_RAPIER = register("diamond_rapier", new RapierItem(ToolMaterials.DIAMOND, 3f, 3.5f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
     public static final RapierItem NETHERITE_RAPIER = register("netherite_rapier", new RapierItem(ToolMaterials.NETHERITE, 4f, 4f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).fireproof()));
-
-    public static final HaladieItem WOODEN_HALADIE = register("wooden_haladie", new HaladieItem(ToolMaterials.WOOD, 2f, 1.4f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
-    public static final HaladieItem STONE_HALADIE = register("stone_haladie", new HaladieItem(ToolMaterials.STONE, 3f, 1.4f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
-    public static final HaladieItem IRON_HALADIE = register("iron_haladie", new HaladieItem(ToolMaterials.IRON, 4f, 1.3f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
-    public static final HaladieItem GOLDEN_HALADIE = register("golden_haladie", new HaladieItem(ToolMaterials.GOLD,2f, 1.2f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
-    public static final HaladieItem DIAMOND_HALADIE = register("diamond_haladie", new HaladieItem(ToolMaterials.DIAMOND, 5f, 1.2f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
-    public static final HaladieItem NETHERITE_HALADIE = register("netherite_haladie", new HaladieItem(ToolMaterials.NETHERITE, 6f, 1.2f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).fireproof()));
 
     public static final WaraxeItem WOODEN_WARAXE = register("wooden_waraxe", new WaraxeItem(ToolMaterials.WOOD, 6, .5f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
     public static final WaraxeItem STONE_WARAXE = register("stone_waraxe", new WaraxeItem(ToolMaterials.STONE, 8, .5f, new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1)));
@@ -86,29 +71,6 @@ public class GOBItems {
     public static final CustomShieldItem GOLDEN_SHIELD = register("golden_shield", new CustomShieldItem(new Item.Settings().maxDamage(150).group(GateOfBabylon.GROUP)));
     public static final CustomShieldItem DIAMOND_SHIELD = register("diamond_shield", new CustomShieldItem(new Item.Settings().maxDamage(1561).group(GateOfBabylon.GROUP)));
     public static final CustomShieldItem NETHERITE_SHIELD = register("netherite_shield", new CustomShieldItem(new Item.Settings().maxDamage(2031).fireproof().group(GateOfBabylon.GROUP)));
-
-    // Yo-Yos are fun ranged weapons.
-    // When the item is used, a projectile is released, which will follow the player's cursor position.
-    // Depending on the Yo-Yo's stats and enchantments, the range, damage, and effects of the Yo-Yo will change.
-    // When the item is used and a Yo-Yo is extended, it will be retracted.
-    // A Yo-Yo loses durability when it hurts an entity.
-    public static final YoyoItem WOODEN_YOYO = register("wooden_yoyo", new YoyoItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1), ToolMaterials.WOOD));
-    public static final YoyoItem STONE_YOYO = register("stone_yoyo", new YoyoItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1), ToolMaterials.STONE));
-    public static final YoyoItem IRON_YOYO = register("iron_yoyo", new YoyoItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1), ToolMaterials.IRON));
-    public static final YoyoItem GOLDEN_YOYO = register("golden_yoyo", new YoyoItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1), ToolMaterials.GOLD));
-    public static final YoyoItem DIAMOND_YOYO = register("diamond_yoyo", new YoyoItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1), ToolMaterials.DIAMOND));
-    public static final YoyoItem NETHERITE_YOYO = register("netherite_yoyo", new YoyoItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).fireproof(), ToolMaterials.NETHERITE));
-
-    // Boomerangs are high-skill medium-ranged weapons.
-    // Upon using a boomerang item, a boomerang projectile will be launched out from the player.
-    // This projectile travels in a straight line and will bounce back as soon as it hits a block or an entity.
-    // If the boomerang has piercing, it will go through mobs until it reaches its maximum distance, and then return.
-    public static final BoomerangItem WOODEN_BOOMERANG = register("wooden_boomerang", new BoomerangItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).maxDamage(150), ToolMaterials.WOOD));
-    public static final BoomerangItem STONE_BOOMERANG = register("stone_boomerang", new BoomerangItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).maxDamage(425), ToolMaterials.STONE));
-    public static final BoomerangItem IRON_BOOMERANG = register("iron_boomerang", new BoomerangItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).maxDamage(750), ToolMaterials.IRON));
-    public static final BoomerangItem GOLDEN_BOOMERANG = register("golden_boomerang", new BoomerangItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).maxDamage(150), ToolMaterials.GOLD));
-    public static final BoomerangItem DIAMOND_BOOMERANG = register("diamond_boomerang", new BoomerangItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).maxDamage(1561), ToolMaterials.DIAMOND));
-    public static final BoomerangItem NETHERITE_BOOMERANG = register("netherite_boomerang", new BoomerangItem(new Item.Settings().group(GateOfBabylon.GROUP).maxCount(1).maxDamage(2031).fireproof(), ToolMaterials.NETHERITE));
 
     public static final Item EXTENDED_STICK = register("extended_stick", new Item(new Item.Settings().group(GateOfBabylon.GROUP)));
 
